@@ -1,3 +1,5 @@
+/// <reference path="linq.js" />
+/// <reference path="linq-vsdoc.js" />
 require('./linq.js');
 
 var jsonArray = [
