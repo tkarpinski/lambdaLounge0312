@@ -6,7 +6,7 @@ Private Function fileMap(ByVal myFile As String) As String
 	ElseIf myFile.Contains("jpg") Then
 		Return "jpg"
 	ElseIf myFile.Contains("bmp") Then
-		Return "jpg"
+		Return "bmp"
 	End If
 End Function
 	
