@@ -1,6 +1,5 @@
 <Query Kind="VBProgram" />
 
-
 Private Function fileMap(ByVal myFile As String) As String
 	If myFile.Contains("png") Then
 		Return "png"
@@ -22,7 +21,7 @@ Sub Main
 	Dim all As String() = {"image.png", "image.jpg", "img2.jpg", "img.bmp"}
 	Dim jpgOnly As String() = {"image.jpg", "image.jpg", "img2.jpg"}
 	Dim pngOnly As String() = {"image.png", "image.png", "img2.png"}
-	Console.WriteLine(both.Select(AddressOf fileMap).Aggregate(AddressOf fileReduce))
+	Console.WriteLine(all.Select(AddressOf fileMap).Aggregate(AddressOf fileReduce))
 	Console.WriteLine(jpgOnly.Select(AddressOf fileMap).Aggregate(AddressOf fileReduce))
 	Console.WriteLine(pngOnly.Select(AddressOf fileMap).Aggregate(AddressOf fileReduce))
 End Sub
