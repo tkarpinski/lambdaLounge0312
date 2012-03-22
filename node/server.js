@@ -15,6 +15,11 @@ var queryResult = Enumerable.From(jsonArray)
     .Select(function (x) { return x.user.screen_name + ':' + x.text })
     .ToArray();
 console.log(JSON.stringify(queryResult));
+var queryResult3 = Enumerable.From(jsonArray)
+    .Where(function (x) { return x.user.id < 200 })
+    .OrderBy(function (x) { return x.user.screen_name })
+    .ToArray();
+console.log(JSON.stringify(queryResult3));
 // shortcut! string lambda selector
 var queryResult2 = Enumerable.From(jsonArray)
     .Where("$.user.id < 200")
