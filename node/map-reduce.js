@@ -4,9 +4,10 @@ var fileMap = function(myFile)
 {
     if (myFile.indexOf("png") > 0) {
 	    return "png";
+        
     }
     else if (myFile.indexOf("jpg") > 0) { 
-        return "jpg";
+        return "jpg";//;
     }
     else if (myFile.indexOf("bmp") > 0) {
         return "bmp";
